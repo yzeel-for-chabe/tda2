@@ -38,9 +38,9 @@ export const usePolylineForMission = (
     useEffect(() => {
         polyline?.setMap(null)
 
-        window.allPolyline.forEach((pl) => {
-            pl.setMap(null)
-        })
+        // window.allPolyline.forEach((pl) => {
+        //     pl.setMap(null)
+        // })
 
         console.log("Something changed, should redraw line !")
 
@@ -54,10 +54,15 @@ export const usePolylineForMission = (
 
         polyline?.setMap(null)
 
+        if(!enabled) return;
+
         try {
             obj = JSON.parse(missionDef);
         } catch {
+            // alert("Error parsing missionDef")
+            // console.log({missionDef})
             obj = {} as unknown as GoogleRouteV2Result;
+            return;
         }
 
         if (!missionDef || !obj || Object.keys(obj).length == 0) return;
