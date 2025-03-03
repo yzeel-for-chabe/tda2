@@ -8,11 +8,11 @@ export const Eta = (props: {
     const { t } = useTranslation()
 
     if(!props.geolocation) {
-        return ""
+        return "NOLOC"
     }
 
     if(!props.geolocation?.mission?.eta) {
-        return ""
+        return "NOETA"
     }
 
     // If ETA < now+5min, display the remaining time in red
