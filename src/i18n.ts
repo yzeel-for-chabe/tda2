@@ -88,7 +88,7 @@ const resources = {
       "unknownEta": "Unknown estimated time of arrival",
       "showTraffic": "Show Traffic",
 
-      "noETA": "Chauffeur on locations",
+      "noETA": "Chauffeur on location",
 
     }
   },
