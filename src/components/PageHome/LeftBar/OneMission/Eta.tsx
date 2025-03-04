@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { paths as geolocpaths } from '../../../../../generated/openapi_geolocation';
+import * as fns from 'date-fns';
 
 export const Eta = (props: {
         geolocation?: geolocpaths['/v1/geolocation/missions/tda']['post']['responses']['200']['content']['application/json'][number]
@@ -7,12 +8,21 @@ export const Eta = (props: {
 
     const { t } = useTranslation()
 
+    
+
     if(!props.geolocation) {
         return null
     }
 
+    if(fns.isAfter(new Date(props.geolocation.mission.datetime), new Date()) && props.geolocation.mission.status == 6) {
+            return <p>
+                {t("noETA")}
+            </p>
+            
+        }
+
     if(!props.geolocation?.mission?.eta) {
-        return t("noETA")
+        return null
     }
 
     // If ETA < now+5min, display the remaining time in red
