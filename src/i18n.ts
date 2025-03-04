@@ -88,6 +88,8 @@ const resources = {
       "unknownEta": "Unknown estimated time of arrival",
       "showTraffic": "Show Traffic",
 
+      "noETA": "Chauffeur in position for pickup",
+
     }
   },
   fr: {
@@ -173,6 +175,7 @@ const resources = {
       "unknownEta": "Estimation d'arrivée inconnue",
       "showTraffic": "Afficher le trafic",
 
+      "noETA": "Chauffeur en position pour pickup",
     }
   }
 };
