@@ -88,7 +88,7 @@ const resources = {
       "unknownEta": "Unknown estimated time of arrival",
       "showTraffic": "Show Traffic",
 
-      "noETA": "Chauffeur in position for pickup",
+      "noETA": "Chauffeur on locations",
 
     }
   },
@@ -175,7 +175,7 @@ const resources = {
       "unknownEta": "Estimation d'arrivée inconnue",
       "showTraffic": "Afficher le trafic",
 
-      "noETA": "Chauffeur en position pour pickup",
+      "noETA": "Chauffeur sur site",
     }
   }
 };
