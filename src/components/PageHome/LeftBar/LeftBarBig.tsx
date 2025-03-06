@@ -25,9 +25,6 @@ export const LeftBarBig = (props: {
                         }}
                     >
                         <TableRow>
-                            <TableCell style={{ width: "5%" }}>
-                                <b>{t("ID")}</b>
-                            </TableCell>
                             <TableCell style={{ width: "15%" }} align="left">
                                 <b>{t("passenger")}</b>
                             </TableCell>
@@ -109,10 +106,8 @@ export const LeftBarBig = (props: {
                                                     : "white",
                                         }}
                                     >
-                                        <TableCell>
-                                            {row.wayniumid}
-                                        </TableCell>
                                         <TableCell
+                                            title={row.wayniumid}
                                             component="th"
                                             scope="row"
                                         >
