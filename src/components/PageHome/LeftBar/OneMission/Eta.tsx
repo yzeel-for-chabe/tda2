@@ -22,7 +22,9 @@ export const Eta = (props: {
         }
 
     if(!props.geolocation?.mission?.eta) {
-        return null
+        return <p>
+        {t("unknownArrivalDateTimeBecauseNoGeolocation")}
+    </p>
     }
 
     // If ETA < now+5min, display the remaining time in red
