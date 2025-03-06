@@ -22,7 +22,7 @@ export const ExplanationEta = (props: {
     }
 
     const eta = new Date(props.geolocation?.mission.eta as unknown as string);
-    if (isNaN(eta.getTime()) || eta.getTime() == 0) {
+    if (fns.isAfter(new Date(props.geolocation.mission.datetime), new Date()) && (isNaN(eta.getTime()) || eta.getTime() == 0)) {
         return <p style={{ fontSize:'smaller', color: 'red', marginRight: 30 }}>
             {t("noPositionForThisMission")}
         </p>

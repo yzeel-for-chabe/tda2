@@ -21,7 +21,7 @@ export const Eta = (props: {
             
         }
 
-    if(!props.geolocation?.mission?.eta) {
+    if(fns.isAfter(new Date(props.geolocation.mission.datetime), new Date()) && !props.geolocation?.mission?.eta) {
         return <p>
         {t("unknownArrivalDateTimeBecauseNoGeolocation")}
     </p>
