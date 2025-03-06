@@ -8,7 +8,10 @@ export const Eta = (props: {
 
     const { t } = useTranslation()
 
-    
+    // Mission started, not yet chauffeur on loc
+    if((props.geolocation?.mission?.status || 0) <= 5) {
+        return null;
+    }
 
     if(!props.geolocation) {
         return null
