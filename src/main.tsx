@@ -29,6 +29,24 @@ const persister = createSyncStoragePersister({
 // 	persister,
 // })
 
+let timeBeforeReloadSec = 300;
+let dateLossOfFocus: Date | null = null;
+function reloadWindowsAfterLossOfFocus() {
+	if (document.visibilityState === 'visible') {
+		if (dateLossOfFocus != null) {
+			let currentTime = new Date();
+			const delta_secs =
+				(currentTime.getTime() - dateLossOfFocus.getTime()) / 1000;
+			if (delta_secs > timeBeforeReloadSec) {
+				window.location.reload();
+			}
+		}
+	} else {
+		dateLossOfFocus = new Date();
+	}
+}
+document.addEventListener('visibilitychange', reloadWindowsAfterLossOfFocus);
+
 ReactDOM.createRoot(document.body).render(
 	<React.StrictMode>
 		<MsalProvider instance={msalInstance}>
