@@ -17,6 +17,12 @@ export const Eta = (props: {
         return null
     }
 
+    if(!props.geolocation?.geolocation) {
+        return <p>
+            {t("unknownArrivalDateTimeBecauseNoGeolocation")}
+        </p>
+    }
+
     if(fns.isAfter(new Date(props.geolocation.mission.datetime), new Date()) && props.geolocation.mission.status == 6) {
             return <p>
                 {t("noETA")}
