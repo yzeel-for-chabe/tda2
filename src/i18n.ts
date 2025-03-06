@@ -68,7 +68,7 @@ const resources = {
       'missionPlannedFor': 'Booking planned for ',
       'driverWaitingForPickUp': 'Vehicle in position for Pick-Up',
       'vehicleInPositionForDropOff': 'Vehicle in position for Drop-Off',
-      'noPositionForThisMission': 'No position for this booking',
+      'noPositionForThisMission': 'Geolocation unknown',
       'lastKnownPositionOfTheVehicle': 'Last known geolocation: ',
       'now': 'now',
       'minutesPrefix': '',
@@ -89,6 +89,7 @@ const resources = {
       "showTraffic": "Show Traffic",
 
       "noETA": "Chauffeur on location",
+      'unknownArrivalDateTimeBecauseNoGeolocation': 'Unknown estimated time of arrival',
 
     }
   },
@@ -155,7 +156,7 @@ const resources = {
       'missionPlannedFor': 'Mission prévue pour ',
       'driverWaitingForPickUp': 'Véhicule en position pour Pick-Up',
       'vehicleInPositionForDropOff': 'Véhicule en position pour Drop-Off',
-      'noPositionForThisMission': 'Aucune position connue pour cette mission',
+      'noPositionForThisMission': 'Aucune géolocalisation disponible',
       'lastKnownPositionOfTheVehicle': 'Dernière géolocalisation ',
       'now': 'maintenant',
       'minutesPrefix': ': ',
@@ -176,6 +177,7 @@ const resources = {
       "showTraffic": "Afficher le trafic",
 
       "noETA": "Chauffeur sur site",
+      'unknownArrivalDateTimeBecauseNoGeolocation': 'Heure d’arrivée estimée inconnue',
     }
   }
 };

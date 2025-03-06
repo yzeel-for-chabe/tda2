@@ -22,7 +22,11 @@ export const ExplanationEta = (props: {
     }
 
     const eta = new Date(props.geolocation?.mission.eta as unknown as string);
-    if (isNaN(eta.getTime()) || eta.getTime() == 0) return null;
+    if (isNaN(eta.getTime()) || eta.getTime() == 0) {
+        return <p style={{ fontSize:'smaller', color: 'red', marginRight: 30 }}>
+            {t("noPositionForThisMission")}
+        </p>
+    }
 
     // If ETA is in the past, we display the vehicle is in position for drop-offs
     if (fns.isBefore(eta, new Date())) {
@@ -41,6 +45,14 @@ export const ExplanationEta = (props: {
             const formatted_time_last_geo = minutes_since_last_geo < 60
                 ? minutes_since_last_geo
                 : `${Math.floor(minutes_since_last_geo / 60)}h ${minutes_since_last_geo % 60}`
+
+
+            //  If  no geolocation at all
+            if(!props.geolocation || !props.geolocation.geolocation) {
+                return <p style={{ fontSize:'smaller', color: 'red', marginRight: 30 }}>
+                    {t("noPositionForThisMission")}
+                </p>
+            }
 
             if(isNaN(minutes_since_last_geo)) {
                 return <p style={{ fontSize:'smaller',color: 'red', marginRight: 30 }}>

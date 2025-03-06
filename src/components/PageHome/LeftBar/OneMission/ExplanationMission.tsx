@@ -29,4 +29,8 @@ export const ExplanationMission = (props: {
         </p>
     }
 
+    return <p style={{ fontSize:'smaller', color: 'red' }}>
+        {t("unknownArrivalDateTimeBecauseNoGeolocation")}
+    </p>
+
 }
