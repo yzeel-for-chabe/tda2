@@ -176,7 +176,7 @@ const resources = {
       "unknownEta": "Estimation d'arrivée inconnue",
       "showTraffic": "Afficher le trafic",
 
-      "noETA": "Chauffeur sur site",
+      "noETA": "Chauffeur sur place",
       'unknownArrivalDateTimeBecauseNoGeolocation': 'Heure d’arrivée estimée inconnue',
     }
   }
