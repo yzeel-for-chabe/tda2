@@ -3,7 +3,7 @@ import type { paths } from "../../generated/openapi"
 
 type response = paths['/v1/missions/filter']['post']['responses']['200']['content']['application/json']
 
-const mission_url = true ? 'http://localhost:2999/v1/missions/filter' : 'https://api.phoenixsoftware.fr/v1/missions/filter'
+const mission_url = false ? 'http://localhost:2999/v1/missions/filter' : 'https://api.phoenixsoftware.fr/v1/missions/filter'
 
 export function useMissions(wayniumclientids: string[]) {
     return useQuery<response>({
