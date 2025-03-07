@@ -18,18 +18,18 @@ export const ExplanationEta = (props: {
         return null;
     }
 
-    if(!props.geolocation?.geolocation) {
-        return <p style={{ fontSize:'smaller', color: 'red', marginRight: 30 }}>
-            {t("noPositionForThisMission")}
-        </p>
-    }
-
     // If not started yet
     if(fns.isAfter(new Date(props.mission.date.substring(0,10) + "T" + props.mission.startTime + ':00'), new Date()) && props.mission.status <= 6) {
         return <p style={{ fontSize:'smaller', color: 'green', marginRight: 30  }}>
             {t("driverWaitingForPickUp")}
         </p>
         
+    }
+
+    if(!props.geolocation?.geolocation) {
+        return <p style={{ fontSize:'smaller', color: 'red', marginRight: 30 }}>
+            {t("noPositionForThisMission")}
+        </p>
     }
 
     const eta = new Date(props.geolocation?.mission.eta as unknown as string);
