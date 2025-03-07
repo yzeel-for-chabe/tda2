@@ -5,7 +5,7 @@ import * as fns from "date-fns"
 import { useTranslation } from "react-i18next"
 type missionT = paths["/v1/missions/filter"]["post"]["responses"]["200"]["content"]["application/json"][number]
 type geolocationT = geolocpaths['/v1/geolocation/missions/tda']['post']['responses']['200']['content']['application/json'][number]
-
+    
 export const ExplanationEta = (props: {
     mission: missionT,
     geolocation?: geolocationT

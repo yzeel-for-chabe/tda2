@@ -126,6 +126,7 @@ export const MissionMapDisplay = (props: {
             {
                 (!extrapolPos || !displayExtrapolation) && (props.geolocations.geolocation) &&
                 <Marker
+                    zIndex={100}
                     onClick={() => userselection.setSelectedMission(props.mission!.id)}
                     position={{ lat: props.geolocations.geolocation.lat, lng: props.geolocations.geolocation.lng }}
                     icon={{
