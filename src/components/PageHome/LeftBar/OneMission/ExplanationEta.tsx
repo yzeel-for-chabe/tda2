@@ -13,10 +13,12 @@ export const ExplanationEta = (props: {
 
     const { t } = useTranslation()
 
-    // Mission started, not yet chauffeur on loc
-    if((props.geolocation?.mission?.status || 0) <= 5) {
-        return null;
-    }
+try {
+        // Mission started, not yet chauffeur on loc
+        if((props.geolocation?.mission?.status || 0) <= 5 && fns.isAfter(new Date(props.geolocation.mission.datetime), new Date())) {
+            return null;
+        }
+} catch {}
 
     // If not started yet
     if(fns.isAfter(new Date(props.mission.date.substring(0,10) + "T" + props.mission.startTime + ':00'), new Date()) && props.mission.status <= 6) {

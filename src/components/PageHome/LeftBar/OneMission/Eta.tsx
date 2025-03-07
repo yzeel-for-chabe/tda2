@@ -9,13 +9,17 @@ export const Eta = (props: {
     const { t } = useTranslation()
 
     // Mission started, not yet chauffeur on loc
-    if((props.geolocation?.mission?.status || 0) <= 5) {
-        return null;
+    try {
+        if((props.geolocation?.mission?.status || 0) <= 5 && fns.isAfter(new Date(props.geolocation.mission.datetime), new Date())) {
+            return null;
+        }
+    } catch {
+        
     }
 
-    if(!props.geolocation) {
-        return null
-    }
+    // if(!props.geolocation) {
+    //     return null
+    // }
 
     if(!props.geolocation?.geolocation) {
         return <p>
