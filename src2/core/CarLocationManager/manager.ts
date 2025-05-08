@@ -64,6 +64,8 @@ export class CarLocationManagerC {
 		}
 	}
 
+	// TODO LOL ?
+
 	public async Refresh(force = false) {
 		if (!force && new Date().getTime() - this.lastRefresh.getTime() < 1000 * 10) {
 			console.log("CarLocationManager: Refreshing too fast, skipping");
@@ -364,7 +366,7 @@ export class CarLocationManagerC {
 				}
 
 				// mission.cache_polylines = lines.polylines;
-				mission.information = t('extrapolatedLastPosition') + " " + mstohuman(new Date().getTime() - last_known_time.getTime()) + t('agoSuffix');
+				mission.information = t('extrapolatedLastPosition') + " " + last_known_time.toLocaleTimeString().substring(0, 5);
 				mission.debug = "geoloc time=" + last_known_time.toLocaleTimeString() + "<br />";
 				mission.debug += "T=" + lines.totalTime + "<br />";
 				mission.debug += "R=" + lines.remainingTime + "<br />";

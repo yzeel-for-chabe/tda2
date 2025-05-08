@@ -1,5 +1,5 @@
 import { useIsAuthenticated, useMsal } from "@azure/msal-react";
-import App from "./components/App";
+import App from "./App";
 import { Button } from "@mui/material";
 
 import { loginRequest } from "./authConfig";

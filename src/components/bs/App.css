@@ -1,0 +1,366 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "EuclidCircularA-Regular" !important;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+
+@font-face {
+  font-family: "EuclidCircularA-Regular";
+  src: local("EuclidCircularA-Regular"),
+      url('/public/Euclid\ Circular\ A\ Regular.d54600880dc63db716f2.ttf')
+}
+
+@font-face {
+  font-family: "EuclidCircularA-Semibold";
+  src: local("EuclidCircularA-Semibold"),
+      url('/public/EuclidSemibold.ttf')
+}
+
+@font-face {
+  font-family: "EuclidCircularA-Bold";
+  src:
+    local("EuclidCircularA-Bold")
+    url(https://agreeable-hill-038a64303.4.azurestaticapps.net/static/media/Euclid%20Circular%20A%20Bold.b4788f2f8f64a74fe6d6.ttf)
+}
+
+.account-menu {
+	background-color: lightgrey;
+}
+
+.account-menu:hover {
+	background-color: #001c40;
+	color: white;
+}
+
+.toggle-button:hover {
+	  cursor: pointer;
+	  filter: opacity(.9)
+}
+
+#midscreencolorchangediv div:nth-child(2n) {
+  filter:brightness(.95)
+}
+
+* {
+  font-family: "EuclidCircularA-Regular" !important;
+}
+
+.css-1ex1afd-MuiTableCell-root {
+  font-family: "EuclidCircularA-Regular" !important;
+}
+
+h1 {
+  color: #001c40;
+  font-weight: 500;
+  font-family: "EuclidCircularA-Semibold";
+  text-transform: uppercase;
+}
+
+.css-b62m3t-container {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.css-hlgwow {
+  -webkit-box-align: center;
+  align-items: center;
+  display: grid;
+  flex: 1 1 0%;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  padding: 2px 8px;
+  box-sizing: border-box;
+}
+
+.react-select-container-lang .react-select__control {
+  border: none;
+  width: 7rem;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.header-chabe {
+  margin: 0;
+  height: 4.9rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 2rem;
+  justify-content: space-around;
+}
+
+.header-item {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.header-home {
+  margin-right: auto;
+}
+
+.header-item li {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.baseline {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family:
+    'EuclidCircularA-Semibold',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-weight: 500;
+  line-height: 100%;
+  color: white;
+}
+
+
+/* Header */
+
+
+#ipx {
+  color: inherit;
+  background: 0px center;
+  opacity: 1;
+  width: 100%;
+  grid-area: 1 / 2;
+  font: inherit;
+  min-width: 2px;
+  border: 0px;
+  margin: 0px;
+  outline: 0px;
+  padding: 0px;
+}
+
+.navbar-chabe {
+  width: 3.5rem;
+  display: inline-flex;
+  padding: 1.5rem 0.75rem;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color: #001c40;
+  height: 100%;
+}
+
+.navbar-logo {
+  margin-top: auto;
+}
+
+menu {
+  padding: 0;
+  margin-top: 15px;
+}
+
+menu li {
+  margin-bottom: 1.5rem;
+  color: #001c40
+}
+
+menu img {
+  vertical-align: middle;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem !important;
+}
+
+.is-active {
+  border-radius: 7px;
+  background-color: #385273;
+}
+
+
+/*
+*/
+
+.page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  overflow: hidden;
+}
+
+.vertical-left {
+  background: rgb(6, 30, 58);
+  height: 100%;
+  width: 68px;
+  padding-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 20;
+  /* box-shadow: 0px 0px 10px rgba(6, 30, 58, 1); */
+}
+
+.vertical-left .logo {
+  filter: grayscale(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-left .logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.vertical-left .logo:hover {
+  filter: grayscale(0%);
+  transition: all 0.3s ease-in-out;
+}
+
+.vertical-left .logo p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #FFF;
+  margin-top: 10px;
+}
+
+.vertical-left .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-left .menu li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #FFF;
+  margin-bottom: 20px;
+  /* border-radius: 4px; */
+  padding: 10px;
+  font-size: 12px;
+}
+
+
+.vertical-left .menu li a {
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.vertical-left .menu li.active {
+  background-color: #DE2B4E;
+}
+
+.vertical-left .menu li:hover {
+  background-color: rgba(156, 156, 156, 0.5);
+}
+
+.vertical-middle {
+  background: #f5f5f5;
+  height: 100%;
+  width: 40%;
+  min-width: 550px;
+  padding: 40px;
+
+  overflow-y: auto;
+
+  z-index: 10;
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 1); */
+}
+
+.vertical-right {
+  background: #061E3A;
+  height: 100%;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+
+  .vertical-left {
+    display: none;
+  }
+
+  .vertical-middle {
+    width: 100%;
+    left: 0;
+  }
+
+  .vertical-right {
+    display: none;
+  }
+}
+
+.livemissioncount {
+  color: #DE2B4E;
+  margin-left: 10px;
+}
+
+.iconfix {
+  transform: translate(0, 2px);
+}
+
+.tabflex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.missions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 4px solid #061E3A;
+}
+
+.vertical-left .bottommenu li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #FFF;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 12px;
+}
+
+
+.vertical-left .bottommenu li a {
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+}
